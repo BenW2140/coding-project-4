@@ -1,3 +1,12 @@
+function Order() {
+  this.pizza = [],
+  this.currentId = 0
+}
+
+Order.prototype.addToOrder = function(pizza) {
+  
+}
+
 function Pizza(size) {
   this.size = size,
   this.toppings = []
@@ -15,7 +24,9 @@ Pizza.prototype.calculatePrice = function(pizza) {
     price = 6;
   }
   pizza.toppings.forEach(function(topping) {
-    if (topping === "Sausage" || topping === "Pepperoni") {
+    if (topping === "Bacon") {
+      price += 2;
+    } else if (topping === "Sausage" || topping === "Pepperoni") {
       price += 1;
     }
   });
