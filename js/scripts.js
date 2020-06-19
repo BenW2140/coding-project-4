@@ -18,11 +18,11 @@ function Pizza(size) {
 
 Pizza.prototype.calculatePrice = function(pizza) {
   let price = 0;
-  if (pizza.size === "Extra Large") {
+  if (pizza.size === "Extra Large $12") {
     price = 12;
-  } else if (pizza.size === "Large") {
+  } else if (pizza.size === "Large $10") {
     price = 10;
-  } else if (pizza.size === "Medium") {
+  } else if (pizza.size === "Medium $8") {
     price = 8;
   } else {
     price = 6;
@@ -85,6 +85,7 @@ $(document).ready(function() {
     $("input:checkbox[name=topping]:checked").each(function() {
       pizza.toppings.push($(this).val());
     });
+    $("#confirm").show();
   });
   $("#confirm").click(function() {
     $("#show-pizza").slideUp();
@@ -93,5 +94,6 @@ $(document).ready(function() {
     displayPizza(order);
     $("#order").slideDown();
     order = new Order;
+    $("#confirm").hide();
   });
 });

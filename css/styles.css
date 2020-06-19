@@ -37,7 +37,9 @@ h4 {
   margin: 5px;
 }
 
-
+#confirm {
+  display: none;
+}
 
 #order {
   display: none;
