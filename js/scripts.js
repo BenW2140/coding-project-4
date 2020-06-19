@@ -55,8 +55,7 @@ const attachPizzaListeners = function(order) {
 const showPizza = function(pizzaId, order) {
   const pizza = order.pizzas[pizzaId - 1];
   let htmlForToppings = ""
-  $("#show-pizza").show();
-  console.log(pizza.size);
+  $("#show-pizza").slideDown();
   $("#price").html(pizza.price);
   $("#size").html(pizza.size);
   pizza.toppings.forEach(function(topping) {
@@ -79,7 +78,8 @@ $(document).ready(function() {
   attachPizzaListeners(order);
   $("#new-pizza").submit(function(event) {
     event.preventDefault();
-    $("#order").hide();
+    $("#order").slideUp();
+    $("#show-pizza").slideUp();
     const size = $("#sizes").val();
     let pizza = order.addToOrder(size);
     $("input:checkbox[name=topping]:checked").each(function() {
@@ -87,6 +87,7 @@ $(document).ready(function() {
     });
   });
   $("#finish").click(function() {
+    $("#show-pizza").slideUp();
     let total = calculateTotal(order);
     $("#total").text(total);
     displayPizza(order);

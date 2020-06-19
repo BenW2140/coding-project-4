@@ -34,6 +34,7 @@ h4 {
 
 .btn {
   border: 1px solid;
+  margin: 5px;
 }
 
 #order {
@@ -43,6 +44,12 @@ h4 {
   border-top: 2px solid;
 }
 
+ul {
+  list-style: inside;
+}
+
 #show-pizza {
   display: none;
+  border-top: 2px solid;
+  padding-top: 10px;
 }
