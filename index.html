@@ -7,14 +7,14 @@
   <link href="css/styles.css" rel="stylesheet">
   <script src="js/jquery-3.5.1.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Pizza Place</title>
+  <title>Pizza Designer</title>
 </head>
 <body>
   <div class="container">
     <h2>Pizza Designer</h2>
     <h4>Size:</h4>
     <form id="new-pizza">
-      <select class="form-control" id="size">
+      <select class="form-control" id="sizes">
         <option>Extra Large</option>
         <option>Large</option>
         <option>Medium</option>
@@ -34,6 +34,14 @@
     <button id="finish" type="click" class="btn btn-primary">Finish</button>
     <div id="order">
       <p>Your total is going to be $<span id="total"></span></p>
+      <ul id="pizza-list">
+
+      </ul>
+      <div id="show-pizza">
+        <p>Price: $<span id="price"></span></p>
+        <p>Size: <span id="size"></span></p>
+        <p>Toppings: <span id="toppings"></span></p>
+      </div>
     </div>
   </div>
 </body>
