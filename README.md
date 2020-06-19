@@ -1,12 +1,12 @@
 # _Pizza Place_
 
-#### _{Brief description of application}, June 19, 2020_
+#### _"Order" a pizza here, June 19, 2020_
 
 #### By _**Ben White**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_This webpage allows the user to customize and "order" a pizza_
 
 ## Setup/Installation Requirements
 

@@ -7,11 +7,33 @@
   <link href="css/styles.css" rel="stylesheet">
   <script src="js/jquery-3.5.1.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Document</title>
+  <title>Pizza Place</title>
 </head>
 <body>
   <div class="container">
-    
+    <form id="new-pizza">
+      <select class="form-control" id="size">
+        <option>Large</option>
+        <option>Medium</option>
+        <option>Small/Personal</option>
+      </select>
+      <div class="radio">
+        <label>Pepperoni</label>
+        <input type="radio" name="topping" value="Pepperoni">
+      </div>
+      <div class="radio">
+        <label>Sausage</label>
+        <input type="radio" name="topping" value="Sausage">
+      </div>
+      <div class="radio">
+        <label>Cheese</label>
+        <input type="radio" name="topping" value="Cheese">
+      </div>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+    <div id="order">
+      <p>Your total is going to be $<span id="total"></span></p>
+    </div>
   </div>
 </body>
 </html>
