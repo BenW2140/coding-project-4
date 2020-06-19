@@ -86,7 +86,7 @@ $(document).ready(function() {
       pizza.toppings.push($(this).val());
     });
   });
-  $("#finish").click(function() {
+  $("#confirm").click(function() {
     $("#show-pizza").slideUp();
     let total = calculateTotal(order);
     $("#total").text(total);

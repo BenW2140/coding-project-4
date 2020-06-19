@@ -37,6 +37,9 @@ Behavior|Input|Output
 The program will allow the user to select a size for a pizza|Medium|Medium pizza
 The program will allow the user to select one topping for a pizza|Pepperoni|Medium pizza w/ pepperoni
 The program will allow the user to select multiple toppings for a pizza|Ham, Pineapple|Medium pizza w/ ham and pineapple
+The program will allow the user to add multiple pizzas to an order|Add to Order|Pizza added
+The program will allow the user to order multiple times|Confirm Order
+The program will allow the user to select a pizza they've ordered to view the details of it|Pizza1|Price:, Size:, Toppings:
 
 ## Known Bugs
 
