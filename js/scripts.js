@@ -12,7 +12,8 @@ Order.prototype.addToOrder = function(size) {
 
 function Pizza(size) {
   this.size = size,
-  this.toppings = []
+  this.toppings = [],
+  this.price = 0
 }
 
 Pizza.prototype.calculatePrice = function(pizza) {
@@ -36,10 +37,20 @@ Pizza.prototype.calculatePrice = function(pizza) {
   return price;
 }
 
+const calculateTotal = function(order) {
+  let total = 0;
+  order.pizzas.forEach(function(pizza) {
+    pizza.price = pizza.calculatePrice(pizza);
+    total += pizza.price;
+  });
+  return total;
+}
+
 $(document).ready(function() {
-  let order = new Order();
+  let order = new Order;
   $("#new-pizza").submit(function(event) {
     event.preventDefault();
+    $("#order").hide();
     const size = $("#size").val();
     let pizza = order.addToOrder(size);
     $("input:checkbox[name=topping]:checked").each(function() {
@@ -47,8 +58,9 @@ $(document).ready(function() {
     });
   });
   $("#finish").click(function() {
-    const total = order.pizzas[0].calculatePrice(order.pizzas[0]);
+    let total = calculateTotal(order);
     $("#total").text(total);
     $("#order").show();
-  })
+    order = new Order;
+  });
 });
