@@ -1,3 +1,39 @@
+body {
+  background-image: url(https://www.papajohns.com/free-pizza/img/hero-free-pizza.jpg);
+  background-color: coral;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  top: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  background-color: darkorange;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+h4 {
+  font-weight: bold;
+  margin: 10px;
+  padding: 5px;
+  border-top: 2px solid black;
+}
+
+.form-group {
+  font-style: italic;
+}
+
+.btn {
+  border: 2px solid black;
+}
+
 #order {
   display: none;
+  
 }

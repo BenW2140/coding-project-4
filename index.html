@@ -11,25 +11,22 @@
 </head>
 <body>
   <div class="container">
+    <h2>Pizza Designer</h2>
+    <h4>Size:</h4>
     <form id="new-pizza">
       <select class="form-control" id="size">
+        <option>Extra Large</option>
         <option>Large</option>
         <option>Medium</option>
         <option>Small/Personal</option>
       </select>
-      <div class="radio">
-        <label>Pepperoni</label>
-        <input type="radio" name="topping" value="Pepperoni">
+      <h4>Toppings:</h4>
+      <div class="form-group">
+        <input type="checkbox" name="topping" value="Pepperoni"> Pepperoni<br>
+        <input type="checkbox" name="topping" value="Sausage"> Sausage<br>
+        <input type="checkbox" name="topping" value="Cheese" checked> Cheese<br>
       </div>
-      <div class="radio">
-        <label>Sausage</label>
-        <input type="radio" name="topping" value="Sausage">
-      </div>
-      <div class="radio">
-        <label>Cheese</label>
-        <input type="radio" name="topping" value="Cheese">
-      </div>
-      <button type="submit" class="btn">Submit</button>
+      <button type="submit" class="btn btn-outline-dark">Submit</button>
     </form>
     <div id="order">
       <p>Your total is going to be $<span id="total"></span></p>
